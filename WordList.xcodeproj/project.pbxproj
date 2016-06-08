@@ -14,6 +14,10 @@
 		5EB053591D073287003DAA61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB053571D073287003DAA61 /* LaunchScreen.storyboard */; };
 		5EB053641D073288003DAA61 /* WordListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB053631D073288003DAA61 /* WordListTests.swift */; };
 		5EB0536F1D073288003DAA61 /* WordListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0536E1D073288003DAA61 /* WordListUITests.swift */; };
+		5EB0537D1D07F685003DAA61 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0537C1D07F685003DAA61 /* QuestionViewController.swift */; };
+		5EB0537F1D07F6F2003DAA61 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0537E1D07F6F2003DAA61 /* FinishViewController.swift */; };
+		5EB053811D07F73A003DAA61 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB053801D07F73A003DAA61 /* ListTableViewController.swift */; };
+		5EB053831D07F781003DAA61 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB053821D07F781003DAA61 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		5EB0536A1D073288003DAA61 /* WordListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB0536E1D073288003DAA61 /* WordListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListUITests.swift; sourceTree = "<group>"; };
 		5EB053701D073288003DAA61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EB0537C1D07F685003DAA61 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		5EB0537E1D07F6F2003DAA61 /* FinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		5EB053801D07F73A003DAA61 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		5EB053821D07F781003DAA61 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,10 @@
 			children = (
 				5EB0534E1D073287003DAA61 /* AppDelegate.swift */,
 				5EB053501D073287003DAA61 /* ViewController.swift */,
+				5EB0537C1D07F685003DAA61 /* QuestionViewController.swift */,
+				5EB0537E1D07F6F2003DAA61 /* FinishViewController.swift */,
+				5EB053821D07F781003DAA61 /* AddViewController.swift */,
+				5EB053801D07F73A003DAA61 /* ListTableViewController.swift */,
 				5EB053521D073287003DAA61 /* Main.storyboard */,
 				5EB053551D073287003DAA61 /* Assets.xcassets */,
 				5EB053571D073287003DAA61 /* LaunchScreen.storyboard */,
@@ -260,7 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EB053511D073287003DAA61 /* ViewController.swift in Sources */,
+				5EB0537F1D07F6F2003DAA61 /* FinishViewController.swift in Sources */,
+				5EB053831D07F781003DAA61 /* AddViewController.swift in Sources */,
 				5EB0534F1D073287003DAA61 /* AppDelegate.swift in Sources */,
+				5EB053811D07F73A003DAA61 /* ListTableViewController.swift in Sources */,
+				5EB0537D1D07F685003DAA61 /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +501,7 @@
 				5EB053751D073288003DAA61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5EB053761D073288003DAA61 /* Build configuration list for PBXNativeTarget "WordListTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +510,7 @@
 				5EB053781D073288003DAA61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5EB053791D073288003DAA61 /* Build configuration list for PBXNativeTarget "WordListUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +519,7 @@
 				5EB0537B1D073288003DAA61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
