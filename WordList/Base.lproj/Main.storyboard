@@ -29,9 +29,6 @@
                                     <action selector="tappedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jaq-hJ-ABp"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Evv-s5-Fxp">
-                                <rect key="frame" x="40" y="90" width="240" height="128"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oie-MS-sRe">
                                 <rect key="frame" x="130" y="417" width="60" height="30"/>
                                 <state key="normal" title="単語一覧">
@@ -41,6 +38,9 @@
                                     <segue destination="Z9h-3P-0Ko" kind="modal" id="5Mw-De-6e2"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="title_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Evv-s5-Fxp">
+                                <rect key="frame" x="40" y="96" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.27587422909999998" green="0.5" blue="0.24361123139999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -164,20 +164,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LHy-QF-sFt">
-                                <rect key="frame" x="20" y="125" width="183" height="73"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TrQ-iU-zPM">
-                                <rect key="frame" x="118" y="257" width="191" height="69"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="word_blank.png" translatesAutoresizingMaskIntoConstraints="NO" id="LHy-QF-sFt">
+                                <rect key="frame" x="20" y="125" width="224" height="73"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e87-iI-pKA">
-                                <rect key="frame" x="90" y="151" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqI-t4-dcr">
-                                <rect key="frame" x="192" y="281" width="42" height="21"/>
+                                <rect key="frame" x="111" y="151" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -193,6 +184,15 @@
                                     <action selector="nextButtonPushed" destination="HvN-DA-7A2" eventType="touchUpInside" id="nBj-hv-l1V"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="word_blank.png" translatesAutoresizingMaskIntoConstraints="NO" id="TrQ-iU-zPM">
+                                <rect key="frame" x="96" y="257" width="213" height="69"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqI-t4-dcr">
+                                <rect key="frame" x="181" y="281" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.27587422911840048" green="0.5" blue="0.24361123135083146" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -220,9 +220,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEx-WJ-GYP">
-                                <rect key="frame" x="40" y="102" width="240" height="128"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7l-QQ-ODM">
                                 <rect key="frame" x="50" y="398" width="221" height="49"/>
                                 <color key="backgroundColor" red="1" green="0.45166285350000002" blue="0.1996023442" alpha="1" colorSpace="calibratedRGB"/>
@@ -234,6 +231,9 @@
                                     <segue destination="8q2-Mf-HN5" kind="unwind" unwindAction="back:" id="lNN-bH-EEh"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fin.png" translatesAutoresizingMaskIntoConstraints="NO" id="eEx-WJ-GYP">
+                                <rect key="frame" x="75" y="85" width="171" height="161"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.27587422909999998" green="0.5" blue="0.24361123139999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -262,4 +262,9 @@
             <point key="canvasLocation" x="162" y="1033"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fin.png" width="231" height="238"/>
+        <image name="title_logo.png" width="373" height="179"/>
+        <image name="word_blank.png" width="336" height="128"/>
+    </resources>
 </document>
