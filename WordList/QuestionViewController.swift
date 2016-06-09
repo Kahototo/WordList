@@ -32,18 +32,18 @@ class QuestionViewController: UIViewController {
         //問題をシャッフルする
         shuffle()
         questionLabel.text = shuffledWordArray[nowNumber]["english"] as? String
-        
     }
     
+    
      func shuffle() {
-        while worryArray.count > 0
+        while worryArray.count > 0 {
             let index = Int(rand()) % worryArray.count
             shuffledWordArray.append(worryArray[index])
             worryArray.removeAtIndex(index)
         }
-    
-
-    func nextButtonPushed () {
+        
+    }
+    @IBAction func nextButtonPushed () {
         
         //回答したか
         if isAnswered {
@@ -53,7 +53,7 @@ class QuestionViewController: UIViewController {
             
             //次の問題を表示するか
             if nowNumber < shuffledWordArray.count  {
-            //次の問題を表示
+               //次の問題を表示
                 questionLabel.text = shuffledWordArray[nowNumber]["english"] as? String
                 //isAnsweredをfalseにする
                 isAnswered = false
@@ -66,23 +66,19 @@ class QuestionViewController: UIViewController {
             
     } else {
             //答えを表示する
-            answerLabel.text = shuffledWordArray[nowNumber]["japanise"] as? String
+            answerLabel.text = shuffledWordArray[nowNumber]["japanese"] as? String
             //isAnswerをtrueにする
             isAnswered = true
             //ボタンのタイトルを変更する
             nextButton.setTitle("次へ", forState: UIControlState.Normal)
-     }
+        }
     }
     
-    
+        }
     
         // Do any additional setup after loading the view.
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    
-    }
+  
 
     /*
     // MARK: - Navigation
@@ -94,6 +90,6 @@ class QuestionViewController: UIViewController {
     }
     */
 
-}
+
 
 

@@ -52,5 +52,5 @@ class ViewController: UIViewController {
 
     @IBAction func tappedButton(sender: AnyObject) {
     }
-}
+  }
 

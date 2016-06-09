@@ -25,6 +25,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="startButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="WoB-Sx-UqP"/>
                                     <action selector="tappedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jaq-hJ-ABp"/>
                                 </connections>
                             </button>
@@ -76,7 +77,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="一覧" id="g7t-mW-VC6">
-                        <barButtonItem key="leftBarButtonItem" title="もどる" id="XVi-Bh-mgl"/>
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="XVi-Bh-mgl">
+                            <connections>
+                                <action selector="back:" destination="ytU-PV-5uD" id="t6r-J8-HpG"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8yI-rX-jek">
                             <connections>
                                 <segue destination="3KR-lY-mcP" kind="push" id="mTJ-dZ-1og"/>
@@ -126,8 +131,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="新規追加" id="4bI-LK-N2o">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="kna-5y-Hai"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="kna-5y-Hai">
+                            <connections>
+                                <action selector="saveWord" destination="3KR-lY-mcP" id="s6R-fQ-gFe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="englishTextField" destination="fqf-sy-GOD" id="ObT-yk-qL6"/>
+                        <outlet property="japaneseTextField" destination="yzK-LQ-ptt" id="ZMo-C4-6aS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bg0-eE-Izh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,6 +164,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LHy-QF-sFt">
+                                <rect key="frame" x="20" y="125" width="183" height="73"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TrQ-iU-zPM">
+                                <rect key="frame" x="118" y="257" width="191" height="69"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e87-iI-pKA">
                                 <rect key="frame" x="90" y="151" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -163,12 +182,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LHy-QF-sFt">
-                                <rect key="frame" x="20" y="125" width="183" height="73"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TrQ-iU-zPM">
-                                <rect key="frame" x="118" y="257" width="191" height="69"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzQ-mu-otT">
                                 <rect key="frame" x="66" y="413" width="188" height="48"/>
                                 <color key="backgroundColor" red="1" green="0.45166285350000002" blue="0.1996023442" alpha="1" colorSpace="calibratedRGB"/>
@@ -176,12 +189,18 @@
                                 <state key="normal" title="答えを表示">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonPushed" destination="HvN-DA-7A2" eventType="touchUpInside" id="nBj-hv-l1V"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.27587422911840048" green="0.5" blue="0.24361123135083146" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="answerLabel" destination="cqI-t4-dcr" id="khq-mw-i1y"/>
+                        <outlet property="nextButton" destination="wzQ-mu-otT" id="bkg-yi-rWh"/>
+                        <outlet property="questionLabel" destination="e87-iI-pKA" id="MKh-0M-tIc"/>
                         <segue destination="lQa-xE-uI6" kind="modal" identifier="toFinishView" id="5Bc-07-nTT"/>
                     </connections>
                 </viewController>
@@ -211,12 +230,16 @@
                                 <state key="normal" title="トップにもどる">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="8q2-Mf-HN5" kind="unwind" unwindAction="back:" id="lNN-bH-EEh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.27587422909999998" green="0.5" blue="0.24361123139999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvF-5W-yas" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8q2-Mf-HN5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="975" y="339"/>
         </scene>
