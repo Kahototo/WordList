@@ -42,6 +42,7 @@ class QuestionViewController: UIViewController {
             wordArray.removeAtIndex(index)
         }
     }
+    
     @IBAction func nextButtonPushed () {
         
         //回答したか

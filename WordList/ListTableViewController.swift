@@ -12,26 +12,31 @@ class ListTableViewController: UITableViewController {
     
     var wordArray: [AnyObject] = []
     let saveData = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.registerNib(UINib(nibName:"ListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         if saveData.arrayForKey("WORD") != nil {
             wordArray = saveData.arrayForKey("WORD")!
         }
         tableView.reloadData()
     }
-
+    
     // MARK: - Table view data source
     
     //セクションの数を設定します。
-  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-       return 1
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
+    
     //セルの個数を指定します。
     override func tableView(tableView: UITableView, numberOfRowsInSection section:
         Int) -> Int {
@@ -46,19 +51,15 @@ class ListTableViewController: UITableViewController {
         
         cell.englishLabel.text = nowIndexPathDictionary["english"] as? String
         cell.japaneseLabel.text = nowIndexPathDictionary["japanese"] as? String
-
+        
         return cell
     }
     
-    @IBAction func back(segue: UIStoryboardSegue){
-        
-    }
-
     /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+     // Override to support conditional editing of the table view.
+     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
     }
     */
 
