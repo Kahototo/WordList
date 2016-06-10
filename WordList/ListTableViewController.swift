@@ -33,7 +33,8 @@ class ListTableViewController: UITableViewController {
        return 1
     }
     //セルの個数を指定します。
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section:
+        Int) -> Int {
         return wordArray.count
     }
     
